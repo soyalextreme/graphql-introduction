@@ -1,0 +1,34 @@
+
+
+
+
+
+
+query getCourses($courseTopic: String!, $courseTopic2: String!){
+peticion1:courses(topic: $courseTopic){
+            ...courseReturnFields
+
+          }
+peticion2:courses(topic: $courseTopic2){
+        ...courseReturnFields
+
+          }
+
+
+}
+
+
+
+
+fragment courseReturnFields on Course {
+      id
+        title
+          author
+            topic
+              url
+
+}
+
+
+
+
